@@ -37,7 +37,7 @@ jobs:
           cd MLProject
           python -c "
           import mlflow
-          runs = mlflow.search_runs(order_by=['start_time DESC'], max_results=1)
+          runs = mlflow.search_runs(experiment_names=['Telco Churn Prediction - CI'], order_by=['start_time DESC'], max_results=1)
           print('Latest run ID:', runs.iloc[0]['run_id'])
           "
 
